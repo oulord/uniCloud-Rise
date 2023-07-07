@@ -8,6 +8,7 @@
 </template>
 
 <script>
+	const cloudObj1 = uniCloud.importObject("cloudObj1")
 	export default {
 		data() {
 			return {
@@ -15,10 +16,19 @@
 			}
 		},
 		onLoad() {
-			this.getData()
+			this.getData(),
+				cloudObj1.add().then(res => {
+					console.log(res);
+				})
 		},
 		methods: {
 			getData() {
+				cloudObj1.get(3).then(res => {
+					console.log(res);
+				})
+
+				return
+
 				uniCloud.callFunction({
 					name: "cloudFun1",
 					data: {
