@@ -1,6 +1,15 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
+		    "path" : "pages/edit/edit",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "添加页面",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		},
+		{
 			"path": "pages/index/index",
 			"style": {}
 		}, {
@@ -11,7 +20,7 @@
 			}
 
 		}
-	],
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "#FFFFFF",
 		"navigationBarTitleText": "郭聿良的圈子",
