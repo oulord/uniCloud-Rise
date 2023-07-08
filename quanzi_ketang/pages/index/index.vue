@@ -17,7 +17,9 @@
 		</view>
 
 		<view class="content">
-			主体
+			<view class="item" v-for="item in dataList">
+				<blog-item></blog-item>
+			</view>
 		</view>
 
 		<view class="edit">
@@ -35,7 +37,8 @@
 				}, {
 					name: "热门"
 				}],
-				loadState: false
+				loadState: false,
+				dataList: [1, 2, 3]
 			}
 		},
 		onLoad() {
@@ -51,6 +54,16 @@
 	.home {
 		.topnav {
 			margin-bottom: 30rpx;
+		}
+
+		.loadingState {
+			padding: 30rpx;
+		}
+
+		.content {
+			.item {
+				padding: 30rpx;
+			}
 		}
 
 		.edit {
